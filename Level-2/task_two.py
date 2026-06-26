@@ -1,15 +1,6 @@
 from datetime import date
 
 
-#####
-#
-# COPY YOUR CODE FROM LEVEL 1 BELOW
-#
-#####
-
-from datetime import date
-
-
 class Trainee:
     """Creates trainee object."""
 
