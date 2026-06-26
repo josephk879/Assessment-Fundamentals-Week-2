@@ -3,23 +3,23 @@ platform linux -- Python 3.14.6, pytest-9.1.1, pluggy-1.6.0
 rootdir: /home/runner/work/Assessment-Fundamentals-Week-2/Assessment-Fundamentals-Week-2
 collected 24 items
 
-Level-1/test_one_task.py F....FFFF                                       [ 37%]
-Level-2/test_two_task.py .....FF                                         [ 66%]
+Level-1/test_one_task.py ......F.F                                       [ 37%]
+Level-2/test_two_task.py .......                                         [ 66%]
 Level-3/test_three_task.py ........                                      [100%]
 
-========================= 7 failed, 17 passed in 0.04s =========================
+========================= 2 failed, 22 passed in 0.04s =========================
 ************* Module task_one
-Level-1/task_one.py:32:8: W0201: Attribute 'assessment' defined outside __init__ (attribute-defined-outside-init)
-Level-1/task_one.py:46:34: W0622: Redefining built-in 'type' (redefined-builtin)
-Level-1/task_one.py:43:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+Level-1/task_one.py:30:8: W0201: Attribute 'assessment' defined outside __init__ (attribute-defined-outside-init)
+Level-1/task_one.py:44:34: W0622: Redefining built-in 'type' (redefined-builtin)
+Level-1/task_one.py:41:0: R0903: Too few public methods (0/2) (too-few-public-methods)
 ************* Module task_two
-Level-2/task_two.py:45:37: W0622: Redefining built-in 'type' (redefined-builtin)
-Level-2/task_two.py:35:8: W0201: Attribute 'assessment' defined outside __init__ (attribute-defined-outside-init)
-Level-2/task_two.py:57:34: W0622: Redefining built-in 'type' (redefined-builtin)
-Level-2/task_two.py:54:0: R0903: Too few public methods (0/2) (too-few-public-methods)
-Level-2/task_two.py:70:0: R0903: Too few public methods (1/2) (too-few-public-methods)
-Level-2/task_two.py:81:0: R0903: Too few public methods (1/2) (too-few-public-methods)
-Level-2/task_two.py:92:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+Level-2/task_two.py:44:37: W0622: Redefining built-in 'type' (redefined-builtin)
+Level-2/task_two.py:30:8: W0201: Attribute 'assessment' defined outside __init__ (attribute-defined-outside-init)
+Level-2/task_two.py:56:34: W0622: Redefining built-in 'type' (redefined-builtin)
+Level-2/task_two.py:53:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+Level-2/task_two.py:69:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+Level-2/task_two.py:80:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+Level-2/task_two.py:91:0: R0903: Too few public methods (1/2) (too-few-public-methods)
 ************* Module task_three
 Level-3/task_three.py:47:37: W0622: Redefining built-in 'type' (redefined-builtin)
 Level-3/task_three.py:37:8: W0201: Attribute 'assessment' defined outside __init__ (attribute-defined-outside-init)
@@ -34,5 +34,5 @@ Level-3/task_three.py:114:0: R0903: Too few public methods (0/2) (too-few-public
 Level-3/task_three.py:147:8: R1705: Unnecessary "elif" after "return", remove the leading "el" from "elif" (no-else-return)
 
 ------------------------------------------------------------------
-Your code has been rated at 8.83/10 (previous run: 8.83/10, +0.00)
+Your code has been rated at 8.80/10 (previous run: 8.80/10, +0.00)
 
