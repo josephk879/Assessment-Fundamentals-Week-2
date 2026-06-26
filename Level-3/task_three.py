@@ -1,14 +1,14 @@
+"""Task 3"""
 
-#####
-#
-# COPY YOUR CODE FROM LEVEL 2 BELOW
-#
-#####
+from datetime import date
+
 
 class Trainee:
     """Creates trainee object."""
 
-    def __init__(self, name: str, email: str, date_of_birth: date, assessments: list[Assessment] = []):
+    def __init__(
+            self, name: str, email: str, date_of_birth: date,
+            assessments: list[Assessment]):
         self.name = name
         self.email = email
         self.date_of_birth = date_of_birth
@@ -45,6 +45,7 @@ class Trainee:
         return None
 
     def get_assessment_of_type(self, type: str) -> list[Assessment]:
+        """Creates a list of assessments of the same type"""
         assessments_of_type = []
         for assessment in self.assessments:
             if assessment.type == type:
@@ -74,6 +75,7 @@ class MultipleChoiceAssessment(Assessment):
         super().__init__(name, "multiple-choice", score)
 
     def calculate_score(self):
+        """Calculates score."""
         return self.score * 0.7
 
 
@@ -84,6 +86,7 @@ class TechnicalAssessment(Assessment):
         super().__init__(name, "technical", score)
 
     def calculate_score(self):
+        """Calculates score."""
         return self.score
 
 
@@ -94,13 +97,8 @@ class PresentationAssessment(Assessment):
         super().__init__(name, "presentation", score)
 
     def calculate_score(self):
+        """Calculates score"""
         return self.score * 0.6
-
-#####
-#
-# COPY YOUR CODE FROM LEVEL 2 ABOVE
-#
-#####
 
 
 class Question:
@@ -151,21 +149,4 @@ class Marking:
         elif self._quiz.type == "technical":
             return TechnicalAssessment(self._quiz.name, self.mark())
 
-        elif self._quiz.type == "presentation":
-            return PresentationAssessment(self._quiz.name, self.mark())
-
-
-if __name__ == "__main__":
-    # Example questions and quiz
-    questions = [
-        Question("What is 1 + 1? A:2 B:4 C:5 D:8", "A", "A"),
-        Question("What is 2 + 2? A:2 B:4 C:5 D:8", "B", "B"),
-        Question("What is 3 + 3? A:2 B:4 C:6 D:8", "C", "C"),
-        Question("What is 4 + 4? A:2 B:4 C:5 D:8", "D", "D"),
-        Question("What is 5 + 5? A:10 B:4 C:5 D:8", "A", "A"),
-    ]
-    quiz = Quiz(questions, "Maths Quiz", "multiple-choice")
-
-    # Add an implementation for the Marking class below to test your code
-    mark = Marking(quiz)
-    print(mark.mark())
+        return PresentationAssessment(self._quiz.name, self.mark())
