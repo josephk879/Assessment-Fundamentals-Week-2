@@ -45,11 +45,12 @@ class Trainee:
         return None
 
     def get_assessment_of_type(self, type: str) -> list[Assessment]:
-        """Creates a list of assessments of the same type"""
+        """Returns a list of all assessments of given type."""
         assessments_of_type = []
         for assessment in self.assessments:
             if assessment.type == type:
                 assessments_of_type.append(assessment)
+        return assessments_of_type
 
 
 class Assessment:

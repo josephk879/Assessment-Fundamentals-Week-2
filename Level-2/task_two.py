@@ -1,3 +1,5 @@
+"""Task two"""
+
 from datetime import date
 
 
@@ -41,10 +43,12 @@ class Trainee:
         return None
 
     def get_assessment_of_type(self, type: str) -> list[Assessment]:
+        """Returns a list of all assessments of given type."""
         assessments_of_type = []
         for assessment in self.assessments:
             if assessment.type == type:
                 assessments_of_type.append(assessment)
+        return assessments_of_type
 
 
 class Assessment:
@@ -70,6 +74,7 @@ class MultipleChoiceAssessment(Assessment):
         super().__init__(name, "multiple-choice", score)
 
     def calculate_score(self):
+        """Calculates score."""
         return self.score * 0.7
 
 
@@ -80,6 +85,7 @@ class TechnicalAssessment(Assessment):
         super().__init__(name, "technical", score)
 
     def calculate_score(self):
+        """Calculates score."""
         return self.score
 
 
@@ -90,18 +96,5 @@ class PresentationAssessment(Assessment):
         super().__init__(name, "presentation", score)
 
     def calculate_score(self):
+        """Calculates score."""
         return self.score * 0.6
-
-
-if __name__ == "__main__":
-    trainee = Trainee("Sigma", "trainee@sigmalabs.co.uk", date(1990, 1, 1))
-    print(trainee)
-    print(trainee.get_age())
-    trainee.add_assessment(MultipleChoiceAssessment(
-        "Python Basics", 90.1))
-    trainee.add_assessment(TechnicalAssessment(
-        "Python Data Structures", 67.4))
-    trainee.add_assessment(MultipleChoiceAssessment("Python OOP", 34.3))
-    print(trainee.get_assessment("Python Basics"))
-    print(trainee.get_assessment("Python Data Structures"))
-    print(trainee.get_assessment("Python OOP"))
