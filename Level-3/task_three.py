@@ -40,7 +40,7 @@ class Trainee:
     def get_assessment(self, name: str) -> Assessment | None:
         """Returns 'Assessment' object that has name given."""
         for assessment in self.assessments:
-            if name in self.assessments:
+            if name == assessment.name:
                 return assessment
         return None
 
