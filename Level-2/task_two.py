@@ -6,16 +6,11 @@ from datetime import date
 class Trainee:
     """Creates trainee object."""
 
-    def __init__(self, name: str, email: str, date_of_birth: date, assessments: list[Assessment]):
+    def __init__(self, name: str, email: str, date_of_birth: date):
         self.name = name
         self.email = email
         self.date_of_birth = date_of_birth
-        self.assessments = assessments
-        if self.assessments is None:
-            self.assessments = []
-        for assessment in assessments:
-            if not isinstance(assessment, Assessment):
-                raise TypeError("An assessment must be of type Assessment.")
+        self.assessments = []
 
     def get_age(self) -> int:
         """Returns trainee age in years."""
@@ -33,6 +28,10 @@ class Trainee:
     def add_assessment(self, assessment: Assessment) -> None:
         """Adds an 'Assessment' to the trainee's list of assessments."""
         self.assessment = assessment
+
+        if not isinstance(assessment, Assessment):
+            raise TypeError("An assessment must be of type Assessment.")
+
         self.assessments.append(self.assessment)
 
     def get_assessment(self, name: str) -> Assessment | None:

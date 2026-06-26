@@ -6,13 +6,11 @@ from datetime import date
 class Trainee:
     """Creates trainee object."""
 
-    def __init__(self, name: str, email: str, date_of_birth: date, assessments: list[Assessment]):
+    def __init__(self, name: str, email: str, date_of_birth: date):
         self.name = name
         self.email = email
         self.date_of_birth = date_of_birth
-        self.assessments = assessments
-        if self.assessments is None:
-            self.assessments = []
+        self.assessments = []
 
     def get_age(self) -> int:
         """Returns trainee age in years."""
