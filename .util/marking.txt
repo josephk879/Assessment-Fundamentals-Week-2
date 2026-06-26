@@ -1,10 +1,10 @@
 ============================= test session starts ==============================
 platform linux -- Python 3.14.6, pytest-9.1.1, pluggy-1.6.0
 rootdir: /home/runner/work/Assessment-Fundamentals-Week-2/Assessment-Fundamentals-Week-2
-collected 9 items / 2 errors
+collected 16 items / 1 error
 
-!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!!
-============================== 2 errors in 0.13s ===============================
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.12s ===============================
 ************* Module task_one
 Level-1/task_one.py:7:0: C0301: Line too long (103/100) (line-too-long)
 Level-1/task_one.py:1:0: C0114: Missing module docstring (missing-module-docstring)
@@ -13,11 +13,21 @@ Level-1/task_one.py:30:8: W0201: Attribute 'assessment' defined outside __init__
 Level-1/task_one.py:44:34: W0622: Redefining built-in 'type' (redefined-builtin)
 Level-1/task_one.py:41:0: R0903: Too few public methods (0/2) (too-few-public-methods)
 ************* Module task_two
+Level-2/task_two.py:16:0: C0301: Line too long (103/100) (line-too-long)
 Level-2/task_two.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-Level-2/task_two.py:19:14: E0602: Undefined variable 'Trainee' (undefined-variable)
-Level-2/task_two.py:22:27: E0602: Undefined variable 'MultipleChoiceAssessment' (undefined-variable)
-Level-2/task_two.py:24:27: E0602: Undefined variable 'TechnicalAssessment' (undefined-variable)
-Level-2/task_two.py:26:27: E0602: Undefined variable 'MultipleChoiceAssessment' (undefined-variable)
+Level-2/task_two.py:10:0: W0404: Reimport 'date' (imported line 1) (reimported)
+Level-2/task_two.py:16:4: W0102: Dangerous default value [] as argument (dangerous-default-value)
+Level-2/task_two.py:52:4: C0116: Missing function or method docstring (missing-function-docstring)
+Level-2/task_two.py:52:37: W0622: Redefining built-in 'type' (redefined-builtin)
+Level-2/task_two.py:42:8: W0201: Attribute 'assessment' defined outside __init__ (attribute-defined-outside-init)
+Level-2/task_two.py:62:34: W0622: Redefining built-in 'type' (redefined-builtin)
+Level-2/task_two.py:59:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+Level-2/task_two.py:81:4: C0116: Missing function or method docstring (missing-function-docstring)
+Level-2/task_two.py:75:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+Level-2/task_two.py:91:4: C0116: Missing function or method docstring (missing-function-docstring)
+Level-2/task_two.py:85:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+Level-2/task_two.py:101:4: C0116: Missing function or method docstring (missing-function-docstring)
+Level-2/task_two.py:95:0: R0903: Too few public methods (1/2) (too-few-public-methods)
 ************* Module task_three
 Level-3/task_three.py:1:0: C0114: Missing module docstring (missing-module-docstring)
 Level-3/task_three.py:17:0: C0115: Missing class docstring (missing-class-docstring)
@@ -31,5 +41,5 @@ Level-3/task_three.py:35:23: W0621: Redefining name 'quiz' from outer scope (lin
 Level-3/task_three.py:33:0: R0903: Too few public methods (0/2) (too-few-public-methods)
 
 ------------------------------------------------------------------
-Your code has been rated at 4.79/10 (previous run: 4.79/10, +0.00)
+Your code has been rated at 7.58/10 (previous run: 7.58/10, +0.00)
 
